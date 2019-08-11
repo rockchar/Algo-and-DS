@@ -9,10 +9,14 @@
 #include <iostream>
 
 void PointerDemo();
+std::string * StalePointer();
+void PointersDemoAdvanced();
+std::string StalePoinetrCorrected();
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     PointerDemo();
+    PointersDemoAdvanced();
     return 0;
 }
 
@@ -59,5 +63,34 @@ void PointerDemo()
     // *ptr = a ; //legal the value of b changes
     /////////////////////////////////////////////////////////////////////////////////
     
-    
+    /*
+     Using *ptr=x instead of ptr=&x is a common error for two reasons.
+     First, because it silences the compiler, programmers feel comfortable about using the incorrect semantics.
+     Second, it looks somewhat like the syntax used for initialization at declaration time.
+     */
+}
+
+// The following function demonstrates an example showing dynamic memory allocation using new and delete
+// stale pointers and stuff
+
+void PointersDemoAdvanced()
+{
+    std::cout<<*StalePointer()<<"\n";
+    std::cout<<StalePoinetrCorrected()<<"\n";
+}
+
+
+//the following method shows a stale pointer
+std::string * StalePointer()
+{
+    std::string mystr = "hello";
+    return &mystr;//we are returning a reference. This variable goes out of scope as soon as the
+                  // fuction return and hence outputs garbage.
+}
+
+//the following is a correct approach
+std::string StalePoinetrCorrected()
+{
+    std::string mystr = "hello";
+    return mystr; //in this case we are basically returning a pointer and hence a copy is made.
 }
