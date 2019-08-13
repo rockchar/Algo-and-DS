@@ -12,11 +12,34 @@ void PointerDemo();
 std::string * StalePointer();
 void PointersDemoAdvanced();
 std::string StalePoinetrCorrected();
+void SwapWrong(int a , int b);
+void SwapPtrs(int * a, int * b);
+void SwapReference(int &a, int &b);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    int a = 10;
+    int b = 20;
     PointerDemo();
     PointersDemoAdvanced();
+    SwapWrong(a , b);
+    std::cout<<"SwapWrong The value of a is "<<a<<"\n";
+    std::cout<<"SwapWrong The value of b is "<<b<<"\n";
+    std::cout<<"Address of a is "<<&a<<"\n";
+    std::cout<<"Address of b is "<<&b<<"\n";
+    SwapPtrs(&a, &b);
+    std::cout<<"Address of a is "<<&a<<"\n";
+    std::cout<<"Address of b is "<<&b<<"\n";
+    std::cout<<"SwapPtrs The value of a is "<<a<<"\n";
+    std::cout<<"SwapPtrs The value of b is "<<b<<"\n";
+    
+    a = 10;
+    b = 20;
+    SwapReference(a, b);
+    std::cout<<"Address of a is "<<&a<<"\n";
+    std::cout<<"Address of b is "<<&b<<"\n";
+    std::cout<<"SwapReference The value of a is "<<a<<"\n";
+    std::cout<<"SwapReference The value of b is "<<b<<"\n";
     return 0;
 }
 
@@ -93,4 +116,37 @@ std::string StalePoinetrCorrected()
 {
     std::string mystr = "hello";
     return mystr; //in this case we are basically returning a pointer and hence a copy is made.
+}
+
+//the following will demonstrate simple swapping of an integer
+//
+//
+
+void SwapWrong(int a , int b)
+{
+    //does not work as we are working on local copies
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+//the following is c style swapping using pointers
+
+void SwapPtrs(int * a, int * b)
+{
+    //this will work as we are working with address locations
+    //so reassigning values to a and b address loctions swaps it
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
+//the following is swapping using C++ style reference
+void SwapReference(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+    
 }
