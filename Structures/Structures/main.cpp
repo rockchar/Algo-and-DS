@@ -32,6 +32,7 @@ bool operator <(const Student& lhs , const Student& rhs);
 //exercise solution
 void ExerciseSolution();
 void SwapInt(int &a, int &b);
+void SwapIntPtr(int *a, int *b);
 int main(int argc, const char * argv[]) {
     // insert code here...
     //the structure fields can be accessed by the . operator
@@ -90,14 +91,22 @@ void ExerciseSolution()
     ptrPtr=&ptr;
     std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
     std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
-    SwapInt(a, b);
+    SwapIntPtr(&a,&b);
+    std::cout<<"After swap\n";
     std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
     std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
 }
-
+// swap using references
 void SwapInt(int &a, int &b)
 {
     int temp = a;
     a = b;
     b = temp;
+}
+// c style swap using pointers
+void SwapIntPtr(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
