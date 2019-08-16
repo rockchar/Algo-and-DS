@@ -95,6 +95,8 @@ void ExerciseSolution()
     std::cout<<"After swap\n";
     std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
     std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
+   
+    
 }
 // swap using references
 void SwapInt(int &a, int &b)

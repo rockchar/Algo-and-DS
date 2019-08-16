@@ -20,6 +20,8 @@ Ans: The five operators that can be applied on pointers are the following:
     b . What is the value of ptr and ptrPtr?
     c . Using no other objects other than already declred, how can you alter ptrPtr so that
        it points to b without directly touching ptr ?
+    d. Is the following code legal?
+       ptrPtr = ptr;
 
 Ans:
     a. Yes the code is legal.
@@ -48,4 +50,7 @@ Ans:
         a = b;
         b = temp;
         }
+
+     d. No the code is not legal. The compiler will throw an error saying type of int** is not compatible
+        with the type int*
 
