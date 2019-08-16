@@ -1,0 +1,51 @@
+1. Name and illustrate the five operations that can be applied on pointers ?
+
+Ans: The five operators that can be applied on pointers are the following:
+     1. Increment operator ++
+     2. Decrement operator --
+     3. Addition subtraction on pointers with a real number
+     4. Subtraction of one pointer from another
+     5. Comparison of two pointers
+
+
+2. Consider the following code
+
+    int a, b;
+    int * ptr;
+    int ** ptrPtr;
+    ptr = &a;
+    ptrPtr = &ptr;
+
+    a . Is the above code legal?
+    b . What is the value of ptr and ptrPtr?
+    c . Using no other objects other than already declred, how can you alter ptrPtr so that
+       it points to b without directly touching ptr ?
+
+Ans:
+    a. Yes the code is legal.
+    b. ptr has memory location of variable a and ptrPtr has memory location of ptr;
+    c. Swap a and b
+
+        void ExerciseSolution()
+        {
+        int a, b;
+        int * ptr = NULL;
+        int ** ptrPtr = NULL;
+        a = 10;
+        b = 20;
+        ptr = &a;
+        ptrPtr=&ptr;
+        std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
+        std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
+        SwapInt(a, b);
+        std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
+        std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
+        }
+
+        void SwapInt(int &a, int &b)
+        {
+        int temp = a;
+        a = b;
+        b = temp;
+        }
+
