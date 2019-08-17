@@ -129,4 +129,9 @@ void PointerAndReferenceValues()
     std::cout<<*&arr[0]<<"\n";
     std::cout<<&*c<<"\n";
     std::cout<<**&c<<"\n";
+    // A reference (or alias) for a.
+    int &d = a;
+    std::cout<<d<<"\n";
+    d = 45;
+    std::cout<<a<<"\n";
 }

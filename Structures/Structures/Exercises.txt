@@ -1,32 +1,33 @@
 1. Name and illustrate the five operations that can be applied on pointers ?
 
-Ans: The five operators that can be applied on pointers are the following:
-     1. Increment operator ++
-     2. Decrement operator --
-     3. Addition subtraction on pointers with a real number
-     4. Subtraction of one pointer from another
-     5. Comparison of two pointers
+Ans:
+        The five operators that can be applied on pointers are the following:
+         1. Increment operator ++
+         2. Decrement operator --
+         3. Addition subtraction on pointers with a real number
+         4. Subtraction of one pointer from another
+         5. Comparison of two pointers
 
 
 2. Consider the following code
 
-    int a, b;
-    int * ptr;
-    int ** ptrPtr;
-    ptr = &a;
-    ptrPtr = &ptr;
+        int a, b;
+        int * ptr;
+        int ** ptrPtr;
+        ptr = &a;
+        ptrPtr = &ptr;
 
-    a . Is the above code legal?
-    b . What is the value of ptr and ptrPtr?
-    c . Using no other objects other than already declred, how can you alter ptrPtr so that
-       it points to b without directly touching ptr ?
-    d. Is the following code legal?
-       ptrPtr = ptr;
+        a . Is the above code legal?
+        b . What is the value of ptr and ptrPtr?
+        c . Using no other objects other than already declred, how can you alter ptrPtr so that
+           it points to b without directly touching ptr ?
+        d. Is the following code legal?
+           ptrPtr = ptr;
 
 Ans:
-    a. Yes the code is legal.
-    b. ptr has memory location of variable a and ptrPtr has memory location of ptr;
-    c. Swap a and b
+        a. Yes the code is legal.
+        b. ptr has memory location of variable a and ptrPtr has memory location of ptr;
+        c. Swap a and b
 
         void ExerciseSolution()
         {
@@ -51,11 +52,14 @@ Ans:
         b = temp;
         }
 
-     d. No the code is not legal. The compiler will throw an error saying type of int** is not compatible
+        d. No the code is not legal. The compiler will throw an error saying type of int** is not compatible
         with the type int*
 
 3.      a. Is *&x always equal to x? If not, give an example.
-        Ans: Yes *&x will be always equal to x.
+
+Ans:
+
+        Yes *&x will be always equal to x.
         b. Is & *x always equal to x? If not, give an example.
         Ans: The expression is not legal as indirection operator requires a pointer type.
         In cases where x is a pointer type pointing to some variable, &(*x) will always show the memory location
@@ -74,7 +78,8 @@ Ans:
         g. *&a
         h. **&ptr
 
-        Ans:
+Ans:
+
         a. This will give the memory address pointed by pointer a and where variable a is stored in the memory.
         b. This will give the value that is stored in the memory location pointed by a.
         c. ptr == a will return false as one is associated with address and one is a value.
@@ -82,5 +87,12 @@ Ans:
         e. address where the ptr variable is stored
         f. *a : illegal as indirection operator can work with pointers
         g. *&a this will give the value of a
-        h. This will give the value of a 
+        h. This will give the value of a
+
+5.      Is the following code legal? Why or why not?
+        int a = 3;
+        const int & b = a;
+
+Ans:
+        Yes the code is legal.
 
