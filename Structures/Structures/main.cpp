@@ -33,6 +33,7 @@ bool operator <(const Student& lhs , const Student& rhs);
 void ExerciseSolution();
 void SwapInt(int &a, int &b);
 void SwapIntPtr(int *a, int *b);
+void PointerAndReferenceValues();
 int main(int argc, const char * argv[]) {
     // insert code here...
     //the structure fields can be accessed by the . operator
@@ -42,7 +43,7 @@ int main(int argc, const char * argv[]) {
     st.lastName  = "kumar";
     st.nStudentNum = 1234;
     st.fGrade      = 89.99;
-    PrintStudentInformation(st);
+   
     Student st1;
     st1.firstName = "rohit";
     st1.lastName  = "kumar";
@@ -52,6 +53,8 @@ int main(int argc, const char * argv[]) {
         std::cout<<"Student marks less"<<"\n";
     else
         std::cout<<"Student marks more"<<"\n";
+    
+     PrintStudentInformation(st);
     return 0;
 }
 
@@ -95,7 +98,7 @@ void ExerciseSolution()
     std::cout<<"After swap\n";
     std::cout<<"valur of ptr is "<<ptr<<" and value of ptrPtr is "<<ptrPtr<<"\n";
     std::cout<<"value pointed by ptr is "<<*ptr<<" and value pointed by ptrPtr is "<<*ptrPtr<<"\n";
-   
+    PointerAndReferenceValues();
     
 }
 // swap using references
@@ -111,4 +114,19 @@ void SwapIntPtr(int *a, int *b)
     int temp = *a;
     *a = *b;
     *b = temp;
+}
+
+void PointerAndReferenceValues()
+{
+    int a , b, *c;
+    a = 100;
+    b = 20;
+    std::cout<<*&a<<"\n";
+    //std::cout<<&*a<<"\n";
+    int arr[] = {1,2,3,4,5};
+    c = &a;
+    std::cout<<&a<<"\n";
+    std::cout<<*&arr[0]<<"\n";
+    std::cout<<&*c<<"\n";
+    std::cout<<**&c<<"\n";
 }
