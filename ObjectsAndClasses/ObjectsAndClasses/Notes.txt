@@ -1,0 +1,34 @@
+Introduction:
+
+Object oriented programming is a dominant paradigm. At the heart of an objected oriented
+program is an object.
+An object is an entity, an instance of a data type that has a structure and state. In simple
+terms An object has state (data) and behavior (code).
+
+Example:
+A dog has states - color, name, breed as well as behaviors – wagging the tail, barking
+eating. An object is an instance of a class. Class − A class can be defined as a template/blueprint
+that describes the behavior/state that the object of its type support.
+
+Each object defines operations that may access or manipulate the states.
+One feature of object oriented progrsmming is that the user defined types must behave like
+the predefined or built in types. Some of the things we can do with predefined or built in
+types that we take for granted are:
+
+    1. Declare new objects, possibly with initialization.
+    2. We can copy them and test for quality.
+    3. We can perform input and output on these objects.(cin and cout)
+    4. If the object is an automatic variable, it must be destroyed when the function in which it is
+       declared terminates.
+    5. We can perform type conversions and the compiler should complain when an inapproriate type
+       conversion is attempted.
+
+Atomicity:
+
+We view the object as an atomic unit whose parts cannot be dissected by the user.
+This atomicity  principle is also known as information hiding or encpsulation. The grouping of the data
+and the operations that apply to them to form an aggregate while hiding the implementation details of
+the aggregate is called encapsulation.
+
+
+
