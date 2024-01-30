@@ -3,13 +3,13 @@
 int pow(int n,int p);
 int main()
 {
-    int res = pow(5,4);
+    int res = pow(2,9);
     printf("%d\n",res);
 }
 
 int pow(int n, int p)
 {
-    if(p < 1)
+    if(p==0)
         return 1;
     else
         return pow(n,p-1)*n;
