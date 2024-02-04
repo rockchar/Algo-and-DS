@@ -3,7 +3,7 @@
 *.xcuserstate
 *.xcbkptlist
 *.xcworkspacedata
-
+*.out
 Recursion/recursion
 Recursion/headtail
 PowerUsingRecursion/a.out
@@ -11,3 +11,4 @@ NaturalSumUsingRecursion/a.out
 Recursion/headtail
 Recursion/headtail
 TreeRecursion/a.out
+Recursion/a.out
